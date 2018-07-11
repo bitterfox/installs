@@ -2,5 +2,5 @@
 
 mkdir -p ~/bin/
 
-wget -O /tmp/idea.tar.gz https://download.jetbrains.com/idea/ideaIU-2018.1.5.tar.gz
+wget -O /tmp/idea.tar.gz "https://data.services.jetbrains.com/products/download?code=IIU&platform=linux"
 tar xvfz /tmp/idea.tar.gz -C ~/bin/
