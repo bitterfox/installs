@@ -1,18 +1,15 @@
 #!/bin/sh
 
-sudo apt update
-
-sudo apt install aptitude
-
-sudo aptitude update
+if [ "--fast" != "$1" ]; then
+    sudo apt update
+fi
 
 # basic components
-sudo aptitude install git mercurial emacs zsh
-sudo aptitude install xclip curl
+sudo apt install git mercurial subversion emacs zsh xclip curl fcitx-mozc
+sudo apt install openjdk-8-jdk maven
 
-sudo aptitude install openjdk-8-jdk maven
-sudo aptitude install fcitx-mozc
-
-sudo aptitude update
-sudo aptitude upgrade
-sudo aptitude upgrade
+if [ "--fast" != "$1" ]; then
+    sudo apt update
+    sudo apt upgrade
+    sudo apt upgrade
+fi
