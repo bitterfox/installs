@@ -12,4 +12,7 @@ wget -O /tmp/winetricks  https://raw.githubusercontent.com/Winetricks/winetricks
 chmod +x /tmp/winetricks
 sudo mv -v /tmp/winetricks /usr/local/bin
 
+sudo apt-get install cabextract
+
 winetricks allfonts
+winetricks settings fontsmooth=rgb
