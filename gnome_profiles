@@ -1,0 +1,6 @@
+[:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
+background-color='rgb(78,75,66)'
+use-theme-colors=false
+palette=['rgb(78,75,66)', 'rgb(204,101,76)', 'rgb(59,168,79)', 'rgb(168,159,59)', 'rgb(59,169,159)', 'rgb(193,75,204)', 'rgb(75,107,204)', 'rgb(180,175,154)', 'rgb(99,95,84)', 'rgb(224,109,86)', 'rgb(66,219,93)', 'rgb(189,183,66)', 'rgb(66,189,183)', 'rgb(217,83,224)', 'rgb(83,113,224)', 'rgb(218,212,187)']
+foreground-color='rgb(218,212,187)'
+visible-name='NieR Automata'

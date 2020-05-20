@@ -1,6 +1,7 @@
 #!/bin/sh
 
-#sudo dd if=/dev/zero of=/swap bs=1G count=16
+sudo dd if=/dev/zero of=/swap bs=1G count=16
+sudo chmod 600 /swap
 sudo mkswap /swap
 sudo swapon /swap
 

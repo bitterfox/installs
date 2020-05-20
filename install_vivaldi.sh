@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if [ -n "`dpkg -l | grep google-chrome`" ]; then
-    echo "Google chrome is already installed. quit."
+if [ -n "`dpkg -l | grep vivaldi-stable`" ]; then
+    echo "Vivaldi is already installed. quit."
     exit 1
 fi
 
-wget -O /tmp/chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb /tmp/chrome.deb
+wget -O /tmp/vivaldi.deb https://downloads.vivaldi.com/stable/vivaldi-stable_3.0.1874.38-1_amd64.deb
 
-sudo dpkg -i /tmp/chrome.deb
+sudo gdebi /tmp/vivaldi.deb
