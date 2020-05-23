@@ -5,9 +5,12 @@ if [ -d ~/.libinput-gestures ]; then
     exit 1
 fi
 
+sudo apt install libinput-tools
+
 git clone --depth 1 https://github.com/bulletmark/libinput-gestures.git ~/.libinput-gestures
-cd ~/.libinput-gestures/install
+pushd ~/.libinput-gestures
 sudo make install
+popd
 
 sudo cp sudoers_libinput_gestures /etc/sudoers.d
 sudo chown root:root /etc/sudoers.d/sudoers_libinput_gestures

@@ -9,5 +9,6 @@ if [ ! -d ~/dotfiles ]; then
 fi
 
 echo "setup dotfiles"
-~/dotfiles/setup.sh
+cd ~/dotfiles
+./setup.sh
 echo "done"

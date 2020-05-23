@@ -9,5 +9,6 @@ if [ ! -d ~/xmonad_dotfiles ]; then
 fi
 
 echo "setup xmonad_dotfiles"
-~/xmonad_dotfiles/setup.sh
+cd ~/xmonad_dotfiles
+./setup.sh
 echo "done"
