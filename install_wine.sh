@@ -1,11 +1,31 @@
 #!/bin/sh
 
-#wget -O /tmp/Release.key -nc https://dl.winehq.org/wine-builds/Release.key
-#sudo apt-key add /tmp/Release.key
-#sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
+# https://www.kkaneko.jp/tools/linuxtoolchain/wine.html
+# https://marmooo.blogspot.com/2020/01/apt.html
+
+wget -O /tmp/winehq.key -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add /tmp/winehq.key
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+# sudo apt-add-repository https://dl.winehq.org/wine-builds/ubuntu/
 
 sudo apt update
-sudo apt install winehq-stable
+
+#sudo dpkg --add-architecture i386
+#sudo apt install --install-recommends winehq-stable
+
+wget -O /tmp/libfaudio0_amd64.deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/amd64/libfaudio0_19.07-0~bionic_amd64.deb
+wget -O /tmp/libfaudio0_i386.deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/i386/libfaudio0_19.07-0~bionic_i386.deb
+
+sudo dpkg -i /tmp/libfaudio0_amd64.deb
+sudo dpkg -i /tmp/libfaudio0_i386.deb
+
+sudo apt install libc-bin
+sudo apt --fix-broken install
+
+sudo dpkg -i /tmp/libfaudio0_i386.deb
+
+sudo apt install --install-recommends winehq-stable
+
 LANG=C winecfg
 
 wget -O /tmp/winetricks  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
