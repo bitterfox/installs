@@ -65,5 +65,6 @@ show_results() {
 choose_interactive
 
 spec docker
+spec git_repos
 
 show_results
