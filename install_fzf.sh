@@ -5,6 +5,7 @@ if [ -d ~/.fzf ]; then
     exit 1
 fi
 
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+git clone --depth 1 https://github.com/bitterfox/fzf.git ~/.fzf
+git -C ~/.fzf checkout develop
 
 ~/.fzf/install
