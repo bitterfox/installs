@@ -43,7 +43,7 @@ exists_font() {
 package_installed() {
     package=$1
 
-    if [ -z "`apt list --installed | awk -F/ '{print $1}' | grep "^$package$"`" ]; then
+    if [ -z "`apt list --installed | awk -F/ '{print $1}' | grep -E "^$package$"`" ]; then
         echo "$package is not installed"
         exit 1
     fi
