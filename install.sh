@@ -23,8 +23,6 @@
 
 
 ./install_slack.sh
-./install_wine.sh
-./install_line.sh
 
 ./install_xkeysnail.sh
 
@@ -34,3 +32,8 @@
 # Dotfiles
 ./install_dotfiles.sh
 ./install_xmonad.sh
+
+# Wine
+./install_wine.sh
+./install_line.sh
+
