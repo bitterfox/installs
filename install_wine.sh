@@ -15,7 +15,7 @@ sudo apt update
 
 . /etc/os-release
 
-if [ "$VERSION_ID" == "18.04" ]; then
+if [ "$VERSION_ID" = "18.04" ]; then
     wget -O /tmp/libfaudio0_amd64.deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/amd64/libfaudio0_19.07-0~bionic_amd64.deb
     wget -O /tmp/libfaudio0_i386.deb https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/xUbuntu_18.04/i386/libfaudio0_19.07-0~bionic_i386.deb
 
@@ -26,7 +26,7 @@ fi
 sudo apt install libc-bin
 sudo apt --fix-broken install
 
-if [ "$VERSION_ID" == "18.04" ]; then
+if [ "$VERSION_ID" = "18.04" ]; then
     sudo dpkg -i /tmp/libfaudio0_i386.deb
 fi
 
