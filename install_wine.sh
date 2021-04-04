@@ -28,7 +28,7 @@ sudo apt --fix-broken install
 
 if [ "$VERSION_ID" = "18.04" ]; then
     sudo dpkg -i /tmp/libfaudio0_i386.deb
-fi
+fi
 
 sudo apt install --install-recommends winehq-stable
 
