@@ -5,7 +5,10 @@ sudo apt install xmonad xmobar ghc libghc-parsec3-dev libghc-split-dev dmenu gmr
 sh install_libinput_gestures.sh
 
 if [ ! -d ~/xmonad_dotfiles ]; then
-    git clone git@github.com:bitterfox/xmonad_dotfiles.git ~/xmonad_dotfiles
+    git clone https://github.com/bitterfox/xmonad_dotfiles ~/xmonad_dotfiles
+    git -C ~/xmonad_dotfiles remote -v
+    git -C ~/xmonad_dotfiles remote set-url origin git@github.com:bitterfox/xmonad_dotfiles.git
+    git -C ~/xmonad_dotfiles remote -v
 fi
 
 echo "setup xmonad_dotfiles"
