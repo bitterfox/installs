@@ -2,4 +2,4 @@
 
 . "`dirname $0`/spec.sh"
 
-exists_command docker
+package_installed pulse

@@ -64,7 +64,11 @@ show_results() {
 
 choose_interactive
 
-spec docker
-spec git_repos
+for f in spec/*.sh; do
+    if [ "$f" != "spec/spec.sh" ]; then
+        s="`echo $f | sed -r 's#spec/(.*)\.sh#\1#'`"
+        spec $s
+    fi
+done
 
 show_results
