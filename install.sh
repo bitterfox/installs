@@ -65,10 +65,11 @@ install pulse_secure
 
 install pulseeffects
 
-
 install slack
 
 install xkeysnail
+
+install central_dogma
 
 # Font
 install ipa_font
@@ -83,4 +84,3 @@ install xmonad
 # Wine
 install wine
 install line
-

@@ -1,0 +1,69 @@
+#!/bin/bash
+
+if [ -f "$HOME/.dogma_line.rc" ]; then
+  . $HOME/.dogma_line.rc
+fi
+
+phase=$1
+shift
+
+run_dogma() {
+  phase=$1
+  shift
+  connect_var=$1
+  shift
+  token_var=$1
+  shift
+
+#    echo "Active profile is $phase" >&2
+    if [ -z "${!connect_var}" ] || [ -z "${!token_var}" ]; then
+      while :; do
+        connect="${!connect_var}"
+        token="${!token_var}"
+
+        if [ -z "${!connect_var}" ]; then
+          echo -n "Connect for $phase is not found. Input connect(URL) > " >&2
+          read connect
+        fi
+
+        if [ -z "${!token_var}" ]; then
+          echo -n "Token for $phase is not found. Input token > " >&2
+          read token
+        fi
+
+        dogma --connect "$connect" --token "$token" ls >> /dev/null
+        result=$?
+        if [ $result -eq 0 ]; then
+          if [ -z "${!connect_var}" ]; then
+            echo "Connect is valid. Store valid connect" >&2
+            echo "${connect_var}='$connect'" >> $HOME/.dogma_line.rc
+            eval "${connect_var}=\"$connect\""
+          fi
+          if [ -z "${!token_var}" ]; then
+            echo "Token is valid. Store valid token" >&2
+            echo "${token_var}='$token'" >> $HOME/.dogma_line.rc
+            eval "${token_var}=\"$token\""
+          fi
+          break
+        fi
+        echo "Connect or token is not valid" >&2
+      done
+    fi
+#    echo "${!connect_var} ${!token_var}" >&2
+    dogma --connect "${!connect_var}" --token "${!token_var}" $@
+}
+
+case "$phase" in
+  "beta" )
+    run_dogma "beta" "BETA_CONNECT" "BETA_TOKEN" $@
+    ;;
+  "staging" | "rc" )
+    run_dogma "staging" "STAGING_CONNECT" "STAGING_TOKEN" $@
+    ;;
+  "release" | "prod" | "real" )
+    run_dogma "release" "RELEASE_CONNECT" "RELEASE_TOKEN" $@
+    ;;
+  * )
+    echo "Unknown profile: $phase"
+    ;;
+esac
