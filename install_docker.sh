@@ -2,7 +2,7 @@
 
 sudo apt-get update
 
-sudo apt-get install \
+sudo apt-get install "$APT_YES" \
     apt-transport-https \
     ca-certificates \
     curl \
