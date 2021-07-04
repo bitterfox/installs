@@ -7,7 +7,7 @@ fi
 
 wget -O /tmp/vivaldi.deb https://downloads.vivaldi.com/stable/vivaldi-stable_3.0.1874.38-1_amd64.deb
 
-sudo gdebi /tmp/vivaldi.deb
+sudo gdebi "$GDEBI_YES" /tmp/vivaldi.deb
 
 cat <<EOF
 

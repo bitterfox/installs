@@ -32,6 +32,17 @@ choose_interactive() {
     fi
 }
 
+choose_yes_all() {
+    echo -n "Yes for all? (y/N) >"
+    read out
+    if [ "$out" = "y" ]; then
+        export YES_ALL="true"
+        export APT_YES="-y"
+        export SNAP_YES="-y"
+        export GDEBI_YES="--non-interactive"
+    fi
+}
+
 choose_install() {
     item=$1
     echo -n "Install $item (Y/n) >"
@@ -43,6 +54,7 @@ choose_install() {
 }
 
 choose_interactive
+choose_yes_all
 
 # Packages
 install dependencies
