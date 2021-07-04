@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt-get install git
+sudo apt install "$APT_YES" git
 
 sh install_fzf.sh
 

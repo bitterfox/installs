@@ -1,5 +1,5 @@
 
-sudo apt install python3-pip
+sudo apt install "$APT_YES" python3-pip
 # xkeysnail v0.3.0 has an issue with key combination like C-x+C-x
 sudo pip3 install xkeysnail==0.2.0
 

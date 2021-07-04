@@ -5,7 +5,7 @@ if [ -d ~/.libinput-gestures ]; then
     exit 1
 fi
 
-sudo apt install libinput-tools
+sudo apt install "$APT_YES" libinput-tools
 
 sudo cp sudoers_libinput_gestures /etc/sudoers.d
 sudo chown root:root /etc/sudoers.d/sudoers_libinput_gestures

@@ -1,6 +1,6 @@
 #/bin/sh
 
-sudo apt install pulseaudio-equalizer
+sudo apt install "$APT_YES" pulseaudio-equalizer
 
 pactl load-module module-equalizer-sink
 pactl load-module module-dbus-protocol

@@ -23,14 +23,14 @@ if [ "$VERSION_ID" = "18.04" ]; then
     sudo dpkg -i /tmp/libfaudio0_i386.deb
 fi
 
-sudo apt install libc-bin
-sudo apt --fix-broken install
+sudo apt install "$APT_YES" libc-bin
+sudo apt --fix-broken install "$APT_YES"
 
 if [ "$VERSION_ID" = "18.04" ]; then
     sudo dpkg -i /tmp/libfaudio0_i386.deb
 fi
 
-sudo apt install --install-recommends winehq-stable
+sudo apt install "$APT_YES" --install-recommends winehq-stable
 
 LANG=C winecfg
 
@@ -38,7 +38,7 @@ wget -O /tmp/winetricks  https://raw.githubusercontent.com/Winetricks/winetricks
 chmod +x /tmp/winetricks
 sudo mv -v /tmp/winetricks /usr/local/bin
 
-sudo apt install cabextract
+sudo apt install "$APT_YES" cabextract
 
 winetricks allfonts
 winetricks settings fontsmooth=rgb
