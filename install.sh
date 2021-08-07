@@ -83,6 +83,8 @@ install xkeysnail
 
 install central_dogma
 
+install clipmenu
+
 # Font
 install ipa_font
 
