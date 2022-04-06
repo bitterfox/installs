@@ -85,6 +85,8 @@ install central_dogma
 
 install clipmenu
 
+install ag
+
 # Font
 install ipa_font
 
