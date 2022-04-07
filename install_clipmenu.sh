@@ -1,12 +1,14 @@
 #!/bin/bash
 
+. `dirname $0`/install_git_repos.sh
+
 sudo apt install "$APT_YES" xsel
 
-git-repos clone https://github.com/cdown/clipnotify.git
+gr_clone github.com cdown clipnotify
 
-cd `git-repos root`/github.com/cdown/clipnotify
+cd `gr root`/github.com/cdown/clipnotify
 sudo make install
 
-git-repos clone https://github.com/bitterfox/clipmenu.git
-cd `git-repos root`/github.com/bitterfox/clipmenu
+gr_clone github.com bitterfox clipmenu
+cd `gr root`/github.com/bitterfox/clipmenu
 sudo make install
