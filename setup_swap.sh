@@ -1,5 +1,10 @@
 #!/bin/sh
 
+if [ "`systemd-detect-virt`" != "none" ]; then
+    echo "VM is detected, won't create swap file"
+    exit 0
+fi
+
 sudo dd if=/dev/zero of=/swap bs=1G count=16
 sudo chmod 600 /swap
 sudo mkswap /swap
