@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sudo apt install "$APT_YES" git
+
 TEMP_GITREPOS=/tmp/gitrepos
 
 gr() {

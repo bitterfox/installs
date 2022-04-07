@@ -1,12 +1,12 @@
 #!/bin/sh
 
-sudo apt install "$APT_YES" git
+. `dirname $0`/install_git_repos.sh
 
-sh install_fzf.sh
+sh `dirname $0`/install_fzf.sh
 
-if [ ! -d ~/dotfiles ]; then
-    git clone https://bitter_fox@bitbucket.org/bitter_fox/dotfiles.git ~/dotfiles
-fi
+gr_clone github.com bitterfox dotfiles
+
+ln -s `gr root`/github.com/bitterfox/dotfiles ~/dotfiles
 
 echo "setup dotfiles"
 cd ~/dotfiles
