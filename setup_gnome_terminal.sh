@@ -9,3 +9,7 @@ if [ -n "`gsettings list-keys org.gnome.Terminal.Legacy.Settings | grep 'headerb
 fi
 
 dconf load /org/gnome/terminal/legacy/profiles:/ < gnome_profiles
+
+cat gnome_profiles | grep "[:.*]" | sed -r "s/\[:(.*)]/\1/" | while read line; do
+    gsettings set org.gnome.Terminal.Legacy.Profile:/org/gnome/terminal/legacy/profiles:/:$line/ cell-height-scale 0.85
+done
