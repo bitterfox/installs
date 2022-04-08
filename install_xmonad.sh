@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo apt install "$APT_YES" xmonad xmobar ghc libghc-parsec3-dev libghc-split-dev dmenu gmrun trayer gnome-control-center gnome-settings-daemon network-manager-gnome libghc-xmonad-dev libghc-xmonad-contrib-dev gnome-screensaver ttf-ancient-fonts-symbola dunst xdotool
+#sudo apt install "$APT_YES" xmonad xmobar ghc libghc-parsec3-dev libghc-split-dev dmenu gmrun trayer gnome-control-center gnome-settings-daemon network-manager-gnome libghc-xmonad-dev libghc-xmonad-contrib-dev gnome-screensaver ttf-ancient-fonts-symbola dunst xdotool
 
 sh install_libinput_gestures.sh
 
@@ -13,5 +13,6 @@ fi
 
 echo "setup xmonad_dotfiles"
 cd ~/xmonad_dotfiles
-./setup.sh
+#./setup.sh
+sudo make PACKAGER=apt PACKAGER_COMMAND="install $APT_YES"
 echo "done"
