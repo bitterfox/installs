@@ -8,5 +8,3 @@
 # 1password CLI v2
 wget -O /tmp/op.deb https://downloads.1password.com/linux/debian/amd64/stable/1password-cli-amd64-latest.deb
 sudo gdebi "$GDEBI_YES" /tmp/op.deb
-
-op signin my.1password.com bitterfoxc@gmail.com

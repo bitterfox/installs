@@ -60,4 +60,6 @@ setup fnmode
 setup keyboard_repeat
 setup libinput_quirks
 
+setup one_password
+
 setup xps13_fan

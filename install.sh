@@ -89,6 +89,8 @@ install ag
 
 install vte
 
+install one_password
+
 # Font
 install ipa_font
 
