@@ -7,7 +7,7 @@ gnome-terminal --version
 gr_clone github.com bitterfox vte
 cd `gr root`/github.com/bitterfox/vte
 
-sudo apt install meson ninja-build gcc-10 g++-10 libvte-2.91-dev libsystemd-dev libgirepository1.0-dev valac libsixel-bin
+sudo apt install "$APT_YES" meson ninja-build gcc-10 g++-10 libvte-2.91-dev libsystemd-dev libgirepository1.0-dev valac libsixel-bin
 
 CC=gcc-10 CXX=g++-10 meson _build -Dsixel=true
 
