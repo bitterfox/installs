@@ -13,6 +13,7 @@ fi
 
 echo "setup xmonad_dotfiles"
 cd ~/xmonad_dotfiles
-#./setup.sh
-sudo make PACKAGER=apt PACKAGER_COMMAND="install $APT_YES"
+sudo ./install.sh apt install "$APT_YES"
+./setup.sh
+
 echo "done"
