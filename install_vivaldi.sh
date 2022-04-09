@@ -5,7 +5,7 @@ if [ -n "`dpkg -l | grep vivaldi-stable`" ]; then
     exit 1
 fi
 
-wget -O /tmp/vivaldi.deb https://downloads.vivaldi.com/stable/vivaldi-stable_3.0.1874.38-1_amd64.deb
+wget -O /tmp/vivaldi.deb https://downloads.vivaldi.com/stable/vivaldi-stable_5.2.2623.26-1_amd64.deb
 
 sudo gdebi "$GDEBI_YES" /tmp/vivaldi.deb
 
