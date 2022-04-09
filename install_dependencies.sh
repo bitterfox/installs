@@ -1,12 +1,37 @@
 #!/bin/sh
 
+# basic components
+# shell
+DEPS="$DEPS zsh"
+DEPS="$DEPS xclip"
+DEPS="$DEPS curl"
+DEPS="$DEPS jq"
+
+# vcs
+DEPS="$DEPS git mercurial subversion"
+
+# util
+DEPS="$DEPS fcitx-mozc"
+DEPS="$DEPS gdebi"
+DEPS="$DEPS net-tools"
+
+# lang
+DEPS="$DEPS openjdk-8-jdk openjdk-8-source maven ant"
+DEPS="$DEPS golang"
+DEPS="$DEPS autoconf"
+
+# lib
+DEPS="$DEPS libx11-dev libxext-dev libxrender-dev libxtst-dev libxt-dev"
+DEPS="$DEPS libcups2-dev libasound2-dev"
+
+# apps
+DEPS="$DEPS gimp"
+
 if [ "--fast" != "$1" ]; then
     sudo apt update
 fi
 
-# basic components
-sudo apt install "$APT_YES" git mercurial subversion zsh xclip curl fcitx-mozc jq gdebi
-sudo apt install "$APT_YES" openjdk-8-jdk openjdk-8-source maven autoconf libx11-dev libxext-dev libxrender-dev libxtst-dev libxt-dev libcups2-dev libasound2-dev ant net-tools gimp golang
+sudo apt install "$APT_YES" $DEPS
 sudo snap install emacs --classic
 
 if [ "--fast" != "$1" ]; then
