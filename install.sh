@@ -87,6 +87,8 @@ install clipmenu
 
 install ag
 
+install vte
+
 # Font
 install ipa_font
 

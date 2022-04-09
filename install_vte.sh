@@ -16,13 +16,7 @@ sudo ninja -C _build install
 
 # Replace libvte
 ls /usr/lib/x86_64-linux-gnu/libvte-2.91.so* | xargs -I % sudo mv % %.bak
-cp /usr/local/lib/x86_64-linux-gnulibvte-2.91.so* /usr/lib/x86_64-linux-gnu/
-
-# Update org.gnome.Terminal.gschema.xml
-sudo cp /usr/share/glib-2.0/schemas/org.gnome.Terminal.gschema.xml /usr/share/glib-2.0/schemas/org.gnome.Terminal.gschema.xml.bak
-sudo sed -r '0,/range min="1.0"/s//range min="0.25"/' -i /usr/share/glib-2.0/schemas/org.gnome.Terminal.gschema.xml
-diff /usr/share/glib-2.0/schemas/org.gnome.Terminal.gschema.xml.bak /usr/share/glib-2.0/schemas/org.gnome.Terminal.gschema.xml
-glib-compile-schemas /usr/share/glib-2.0/schemas
+sudo cp /usr/local/lib/x86_64-linux-gnu/libvte-2.91.so* /usr/lib/x86_64-linux-gnu/
 
 gnome-terminal --version
 
