@@ -1,2 +1,4 @@
+#!/bin/bash
 
-sudo cp `pwd`/local-overrides.quirks /etc/libinput/
+mkdir -p /etc/libinput/
+sudo cp `dirname $0`/local-overrides.quirks /etc/libinput/

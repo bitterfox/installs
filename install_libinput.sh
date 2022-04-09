@@ -3,6 +3,8 @@
 
 option=$1
 
+sudo apt install "$APT_YES" libinput-tools
+
 libinput --version
 
 libinput quirks validate
