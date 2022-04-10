@@ -91,6 +91,8 @@ install vte
 
 install one_password
 
+install go_jira
+
 # Font
 install ipa_font
 
