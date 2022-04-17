@@ -17,7 +17,6 @@ DEPS="$DEPS net-tools"
 
 # lang
 DEPS="$DEPS openjdk-8-jdk openjdk-8-source maven ant"
-DEPS="$DEPS golang"
 DEPS="$DEPS autoconf"
 
 # lib
