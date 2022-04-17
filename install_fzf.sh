@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -d ~/.fzf ] && [ -f ~/.fzf/target/fzf-linux_amd64 ] && [ "`md5sum ~/.fzf/target/fzf-linux_amd64`" == "`md5sum ~/.fzf/bin/fzf`" ]; then
+if [ -d ~/.fzf ] && [ -f ~/.fzf/target/fzf-linux_amd64 ] && [ "`md5sum ~/.fzf/target/fzf-linux_amd64 | awk '{print $1}'`" == "`md5sum ~/.fzf/bin/fzf | awk '{print $1}'`" ]; then
     echo "Fzf is already installed. quit."
     exit 1
 fi
