@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -d ~/.fzf ] && [ -f ~/.fzf/target/fzf-linux_amd64 ] && [ "`md5sum ~/.fzf/target/fzf-linux_amd64`" == "`md5sum ~/.fzf/bin/fzf`"]; then
+if [ -d ~/.fzf ] && [ -f ~/.fzf/target/fzf-linux_amd64 ] && [ "`md5sum ~/.fzf/target/fzf-linux_amd64`" == "`md5sum ~/.fzf/bin/fzf`" ]; then
     echo "Fzf is already installed. quit."
     exit 1
 fi
@@ -15,5 +15,7 @@ git -C ~/.fzf checkout develop
 ~/.fzf/install
 
 cd ~/.fzf
+
+PATH="$PATH:~/bin/"
 make
 cp target/fzf-linux_amd64 bin/fzf
