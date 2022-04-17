@@ -1,3 +1,3 @@
 #!/bin/bash
 
-GO111MODULE=on ~/bin/go get github.com/go-jira/jira/cmd/jira
+GO111MODULE=on ~/bin/go install github.com/go-jira/jira/cmd/jira@latest
