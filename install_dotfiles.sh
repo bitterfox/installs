@@ -2,7 +2,8 @@
 
 . `dirname $0`/install_git_repos.sh
 
-sh `dirname $0`/install_fzf.sh
+`dirname $0`/install_fzf.sh
+`dirname $0`/install_fzflet.sh
 
 gr_clone github.com bitterfox dotfiles
 

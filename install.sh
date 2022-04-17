@@ -69,6 +69,7 @@ install vivaldi
 install sdkman
 install intellij
 install jetbrains_toolbox
+install go
 
 install libinput
 install libinput_gestures
@@ -92,6 +93,8 @@ install vte
 install one_password
 
 install go_jira
+
+install gh
 
 # Font
 install ipa_font
