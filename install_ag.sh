@@ -9,6 +9,8 @@ git checkout develop
 
 sudo apt install "$APT_YES" libpcre++-dev
 
+aclocal -I m4
+
 ./autogen.sh
 ./configure
 make
