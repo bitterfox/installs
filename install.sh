@@ -96,6 +96,8 @@ install go_jira
 
 install gh
 
+install dunst
+
 # Font
 install ipa_font
 
