@@ -6,7 +6,7 @@ DEPS="$DEPS zsh"
 DEPS="$DEPS xclip"
 DEPS="$DEPS curl"
 DEPS="$DEPS jq"
-DEPS="$DEPS batcat"
+DEPS="$DEPS bat"
 
 # vcs
 DEPS="$DEPS git mercurial subversion"
