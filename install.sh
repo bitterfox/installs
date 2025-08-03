@@ -88,7 +88,7 @@ install clipmenu
 
 install ag
 
-install vte
+# install vte
 
 install one_password
 
