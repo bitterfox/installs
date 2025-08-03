@@ -14,3 +14,10 @@
   tar zxvf "${KREW}.tar.gz" &&
   ./"${KREW}" install krew
 )
+
+# Install minikube
+
+wget -O /tmp/minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+chmod +x /tmp/minikube
+sudo mv /tmp/minikube /usr/local/bin
+minikube version
