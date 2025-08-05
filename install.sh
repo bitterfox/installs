@@ -56,6 +56,9 @@ choose_install() {
 choose_interactive
 choose_yes_all
 
+sudo sed -i.bak -r 's@http://(jp\.)?archive\.ubuntu\.com/ubuntu/?@https://ftp.udx.icscoe.jp/Linux/ubuntu/@g' /etc/apt/sources.list.d/ubuntu.sources
+sudo apt update
+
 # Packages
 install dependencies
 
