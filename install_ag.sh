@@ -7,7 +7,7 @@ gr_clone github.com bitterfox the_silver_searcher
 cd `gr root`/github.com/bitterfox/the_silver_searcher
 git checkout develop
 
-sudo apt install "$APT_YES" libpcre++-dev
+sudo apt install "$APT_YES" libpcre3-dev
 
 aclocal -I m4
 
