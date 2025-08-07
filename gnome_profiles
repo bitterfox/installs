@@ -1,5 +1,5 @@
 [/]
-list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '55afc181-baa2-40e5-975a-cfc014b8cf08']
+list=['b1dcc9dd-5262-4d8d-a863-c897e6d979b9', '489764d1-f882-43c5-b39d-6897c9ab8f9d', '55afc181-baa2-40e5-975a-cfc014b8cf08']
 
 [:b1dcc9dd-5262-4d8d-a863-c897e6d979b9]
 background-color='rgb(78,75,66)'
@@ -9,8 +9,10 @@ visible-name='NieR Automata'
 foreground-color='rgb(218,212,187)'
 use-system-font=false
 font='Monospace 11'
+cell-width-scale=0.85
+cell-height-scale=0.85
 
-[:55afc181-baa2-40e5-975a-cfc014b8cf08]
+[:489764d1-f882-43c5-b39d-6897c9ab8f9d]
 background-color='rgb(218,212,187)'
 use-theme-colors=false
 palette=['rgb(78,75,66)', 'rgb(204,101,76)', 'rgb(59,168,79)', 'rgb(168,159,59)', 'rgb(59,169,159)', 'rgb(193,75,204)', 'rgb(75,107,204)', 'rgb(180,175,154)', 'rgb(99,95,84)', 'rgb(224,109,86)', 'rgb(66,189,93)', 'rgb(189,183,66)', 'rgb(66,189,183)', 'rgb(217,83,224)', 'rgb(83,113,224)', 'rgb(218,212,187)']
@@ -18,3 +20,17 @@ visible-name='NieR Automata Bright'
 foreground-color='rgb(78,75,66)'
 use-system-font=false
 font='Monospace 11'
+cell-width-scale=0.85
+cell-height-scale=0.85
+
+
+[:55afc181-baa2-40e5-975a-cfc014b8cf08]
+background-color='rgb(218,212,187)'
+use-theme-colors=false
+palette=['rgb(78,75,66)', 'rgb(204,101,76)', 'rgb(59,168,79)', 'rgb(168,159,59)', 'rgb(59,169,159)', 'rgb(193,75,204)', 'rgb(75,107,204)', 'rgb(180,175,154)', 'rgb(99,95,84)', 'rgb(224,109,86)', 'rgb(66,189,93)', 'rgb(189,183,66)', 'rgb(66,189,183)', 'rgb(217,83,224)', 'rgb(83,113,224)', 'rgb(218,212,187)']
+visible-name='NieR Automata Bright Menu'
+foreground-color='rgb(78,75,66)'
+use-system-font=false
+font='Monospace 11'
+cell-width-scale=1.1
+cell-height-scale=1.1
