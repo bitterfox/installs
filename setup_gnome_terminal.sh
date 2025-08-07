@@ -16,6 +16,9 @@ if [ -n "`grep -A1 cell-height-scale /usr/share/glib-2.0/schemas/org.gnome.Termi
     sudo sed -r '0,/range min="1.0"/s//range min="0.25"/' -i /usr/share/glib-2.0/schemas/org.gnome.Terminal.gschema.xml
     diff /usr/share/glib-2.0/schemas/org.gnome.Terminal.gschema.xml.bak /usr/share/glib-2.0/schemas/org.gnome.Terminal.gschema.xml
     sudo glib-compile-schemas /usr/share/glib-2.0/schemas
+    # gnome-terminal verifies local installed schema with compiled schema
+    # to avoid verification, we have to move out compiled schema of gnome-terminal
+    sudo mv /usr/lib/x86_64-linux-gnu/gnome-terminal/gschemas.compiled /usr/lib/x86_64-linux-gnu/gnome-terminal/gschemas.compiled.bak
 fi
 
 cat gnome_profiles | grep "[:.*]" | sed -r "s/\[:(.*)]/\1/" | while read line; do

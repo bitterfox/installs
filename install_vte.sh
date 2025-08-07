@@ -4,10 +4,20 @@
 
 gnome-terminal --version
 
+VTE_VERSION=`gnome-terminal --version | sed -r "s/.*VTE ([^ ]+) .*/\1/"`
+
+echo Installing $VTE_VERSION
+
 gr_clone github.com bitterfox vte
 cd `gr root`/github.com/bitterfox/vte
+git checkout vte-$VTE_VERSION
 
-sudo apt install "$APT_YES" meson ninja-build gcc-10 g++-10 libvte-2.91-dev libsystemd-dev libgirepository1.0-dev valac libsixel-bin
+if [ $? -ne 0 ]; then
+    echo "$VTE_VERSION is not found in `gr root`/github.com/bitterfox/vte, abort"
+    exit 1
+fi
+
+sudo apt install "$APT_YES" meson ninja-build gcc-10 g++-10 libvte-2.91-dev libsystemd-dev libgirepository1.0-dev valac libsixel-bin liblz4-dev
 
 CC=gcc-10 CXX=g++-10 meson _build -Dsixel=true
 
