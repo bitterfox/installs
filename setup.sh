@@ -63,3 +63,5 @@ setup libinput_quirks
 setup one_password
 
 setup xps13_fan
+
+setup workaround_xdg_desktop_portal_gnome
