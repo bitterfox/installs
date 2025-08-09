@@ -82,6 +82,7 @@ install pulse_secure
 install pulseeffects
 
 install slack
+install discord
 
 install xkeysnail
 

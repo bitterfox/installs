@@ -26,6 +26,7 @@ DEPS="$DEPS libcups2-dev libasound2-dev"
 
 # apps
 DEPS="$DEPS gimp"
+DEPS="$DEPS blueman"
 
 if [ "--fast" != "$1" ]; then
     sudo apt update
