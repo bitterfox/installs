@@ -13,7 +13,8 @@ fi
 
 echo "setup xmonad_dotfiles"
 cd ~/xmonad_dotfiles
-sudo ./install.sh apt install "$APT_YES"
+git checkout za9c-r58_ubuntu2404
+./install.sh apt install "$APT_YES"
 ./setup.sh
 
 echo "done"

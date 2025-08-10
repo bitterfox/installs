@@ -62,46 +62,51 @@ sudo apt update
 # Packages
 install dependencies
 
-install docker
-install packer
-install kubernetes
-
+# Browser
 install google_chrome
 install vivaldi
 
+# Dev
 install sdkman
 install intellij
 install jetbrains_toolbox
 install go
 
+# Terminal and Tools
+install vte
+install clipmenu
+install ag
+install gh
+
+# VM
+install docker
+install packer
+install kubernetes
+install virtualbox
+
+# IO devices (keyboard/mouse)
+install xkeysnail
 install libinput
 install libinput_gestures
 
+# Sound
+install easyeffects
+
+# Security
 install pulse_secure
+install one_password
 
-install pulseeffects
 
+# Communication
 install slack
 install discord
 
-install xkeysnail
-
-install central_dogma
-
-install clipmenu
-
-install ag
-
-# install vte
-
-install one_password
-
-install go_jira
-
-install gh
-
 # Font
 install ipa_font
+
+# Others
+install central_dogma
+install go_jira
 
 # My package
 install git_repos
