@@ -59,6 +59,7 @@ setup ctrl_caps
 setup fnmode
 setup keyboard_repeat
 setup libinput_quirks
+setup sony_dualsense
 
 setup one_password
 
