@@ -88,6 +88,7 @@ install virtualbox
 install xkeysnail
 install libinput
 install libinput_gestures
+install mouse
 
 # Sound
 install easyeffects
