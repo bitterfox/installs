@@ -18,7 +18,7 @@ echo ""
 echo "After adding your key, press any key"
 read line
 
-gr clone git@github.com:bitterfox/dotfiles
+gr clone git@github.com:bitterfox/dotfiles.git
 
 ln -s `gr root`/github.com/bitterfox/dotfiles ~/dotfiles
 

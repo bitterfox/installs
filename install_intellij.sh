@@ -2,7 +2,7 @@
 
 mkdir -p ~/bin/
 
-wget -O /tmp/idea.tar.gz "https://data.services.jetbrains.com/products/download?code=IIU&platform=linux"
+wget -O /tmp/idea.tar.gz "https://data.services.jetbrains.com/products/download?code=IIU&platform=linuxARM64"
 tar xvfz /tmp/idea.tar.gz -C ~/bin/
 
 ln -s ~/bin/idea*/bin/idea.sh ~/bin/idea
