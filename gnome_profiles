@@ -9,7 +9,7 @@ visible-name='NieR Automata'
 foreground-color='rgb(218,212,187)'
 use-system-font=false
 font='Monospace 11'
-cell-width-scale=0.85
+cell-width-scale=1
 cell-height-scale=0.85
 
 [:489764d1-f882-43c5-b39d-6897c9ab8f9d]
@@ -20,7 +20,7 @@ visible-name='NieR Automata Bright'
 foreground-color='rgb(78,75,66)'
 use-system-font=false
 font='Monospace 11'
-cell-width-scale=0.85
+cell-width-scale=1
 cell-height-scale=0.85
 
 
