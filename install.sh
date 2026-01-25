@@ -1,7 +1,22 @@
 #!/bin/bash
 
+basedir=`dirname $0`
+
+if grep -q "Ubuntu" /etc/os-release; then
+    OS="ubuntu"
+else
+    if [[ "`uname -s`" == "Darwin" ]]; then
+        OS="mac"
+    fi
+fi
+
 install() {
     item=$1
+    installer="$basedir/$item/$OS/install.sh"
+
+    if [[ ! -f "$installer" ]]; then
+        echo "$item not found for $OS, skip installing $item"
+    fi
 
     if [ "$INSTALL_ALL" != "true" ]; then
         choose_install "$item"
@@ -16,7 +31,7 @@ install() {
 #                                          Install $item
 ####################################################################################################
 EOF
-    ./install_${item}.sh
+    $installer
     cat <<EOF
 ####################################################################################################
 #                                          Done $item
@@ -55,9 +70,6 @@ choose_install() {
 
 choose_interactive
 choose_yes_all
-
-sudo sed -i.bak -r 's@http://(jp\.)?archive\.ubuntu\.com/ubuntu/?@https://ftp.udx.icscoe.jp/Linux/ubuntu/@g' /etc/apt/sources.list.d/ubuntu.sources
-sudo apt update
 
 # Packages
 install dependencies

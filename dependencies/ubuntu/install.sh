@@ -28,9 +28,8 @@ DEPS="$DEPS libcups2-dev libasound2-dev"
 DEPS="$DEPS gimp"
 DEPS="$DEPS blueman"
 
-if [ "--fast" != "$1" ]; then
-    sudo apt update
-fi
+sudo sed -i.bak -r 's@http://(jp\.)?archive\.ubuntu\.com/ubuntu/?@https://ftp.udx.icscoe.jp/Linux/ubuntu/@g' /etc/apt/sources.list.d/ubuntu.sources
+sudo apt update
 
 sudo apt install "$APT_YES" $DEPS
 sudo snap install emacs --classic
