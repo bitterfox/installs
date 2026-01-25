@@ -1,5 +1,5 @@
 #!/bin/bash
 
-. "`dirname $0`/spec.sh"
+. $INSTALL_ROOT_DIR/spec/$INSTALL_OS/spec.sh
 
 exists_dir $HOME/git-repos/github.com/bitterfox/gitrepos

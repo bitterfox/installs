@@ -1,7 +1,19 @@
 #!/bin/bash
 
+basedir=`dirname $0`
+
+if grep -q "Ubuntu" /etc/os-release; then
+    OS="ubuntu"
+else
+    if [[ "`uname -s`" == "Darwin" ]]; then
+        OS="mac"
+    fi
+fi
+
 spec() {
     item=$1
+    spec="$basedir/$item/$OS/spec.sh"
+
 
     if [ "$SPEC_ALL" != "true" ]; then
         choose_spec "$item"
@@ -16,7 +28,7 @@ spec() {
 #                                          Spec $item
 ####################################################################################################
 EOF
-    ./spec/${item}.sh
+    $spec
 
     succ=$?
 
@@ -64,9 +76,12 @@ show_results() {
 
 choose_interactive
 
-for f in spec/*.sh; do
+export INSTALL_ROOT_DIR="$basedir"
+export INSTALL_OS="$OS"
+
+for f in $basedir/*/$OS/spec.sh; do
     if [ "$f" != "spec/spec.sh" ]; then
-        s="`echo $f | sed -r 's#spec/(.*)\.sh#\1#'`"
+        s="`echo "${f%/*/*}" | xargs basename`"
         spec $s
     fi
 done
