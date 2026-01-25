@@ -16,6 +16,7 @@ install() {
 
     if [[ ! -f "$installer" ]]; then
         echo "$item not found for $OS, skip installing $item"
+        return
     fi
 
     if [ "$INSTALL_ALL" != "true" ]; then

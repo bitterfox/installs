@@ -16,6 +16,7 @@ setup() {
 
     if [[ ! -f "$setup" ]]; then
         echo "$item not found for $OS, skip setup $item"
+        return
     fi
 
     if [ "$SETUP_ALL" != "true" ]; then

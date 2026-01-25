@@ -14,6 +14,10 @@ spec() {
     item=$1
     spec="$basedir/$item/$OS/spec.sh"
 
+    if [[ ! -f "$spec" ]]; then
+        echo "$item not found for $OS, skip spec $item"
+        return
+    fi
 
     if [ "$SPEC_ALL" != "true" ]; then
         choose_spec "$item"
