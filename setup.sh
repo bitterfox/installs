@@ -1,7 +1,22 @@
 #!/bin/bash
 
+basedir=`dirname $0`
+
+if grep -q "Ubuntu" /etc/os-release; then
+    OS="ubuntu"
+else
+    if [[ "`uname -s`" == "Darwin" ]]; then
+        OS="mac"
+    fi
+fi
+
 setup() {
     item=$1
+    setup="$basedir/$item/$OS/setup.sh"
+
+    if [[ ! -f "$setup" ]]; then
+        echo "$item not found for $OS, skip setup $item"
+    fi
 
     if [ "$SETUP_ALL" != "true" ]; then
         choose_setup "$item"
@@ -16,7 +31,7 @@ setup() {
 #                                          Setup $item
 ####################################################################################################
 EOF
-    ./setup_${item}.sh
+    $setup
     cat <<EOF
 ####################################################################################################
 #                                          Done $item
