@@ -84,6 +84,7 @@ install sdkman
 install intellij
 install jetbrains_toolbox
 install go
+install python
 
 # Terminal and Tools
 install vte
