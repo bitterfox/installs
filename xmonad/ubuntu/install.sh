@@ -2,7 +2,7 @@
 
 #sudo apt install "$APT_YES" xmonad xmobar ghc libghc-parsec3-dev libghc-split-dev dmenu gmrun trayer gnome-control-center gnome-settings-daemon network-manager-gnome libghc-xmonad-dev libghc-xmonad-contrib-dev gnome-screensaver ttf-ancient-fonts-symbola dunst xdotool
 
-sh install_libinput_gestures.sh
+sh `dirname $0`/../../libinput_gestures/ubuntu/install.sh
 
 if [ ! -d ~/xmonad_dotfiles ]; then
     git clone https://github.com/bitterfox/xmonad_dotfiles ~/xmonad_dotfiles

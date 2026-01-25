@@ -1,6 +1,6 @@
 #!/bin/sh
 
-. `dirname $0`/install_git_repos.sh
+. `dirname $0`/../../git_repos/ubuntu/install.sh
 
 gr_clone github.com bitterfox fzflet
 
