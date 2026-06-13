@@ -114,7 +114,10 @@ install git_repos
 
 # Dotfiles
 install dotfiles
+
+# Xmonad
 install xmonad
+install warpd
 
 # Wine
 install wine
